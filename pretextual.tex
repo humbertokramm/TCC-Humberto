@@ -1,0 +1,146 @@
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+%\imprimirfolhaderosto*
+\imprimirfolhaderosto
+% ---
+
+
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+Aos seres humanos...... 
+
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+
+\begin{comment}
+Epígrafe (Não se escreve a palavra epígrafe). Elemento opcional. 
+A epígrafe deve ser colocada após o agradecimento; trata-se de uma citação, seguida de indicação de autoria, relacionada à matéria tratada no corpo do trabalho. Deve ser “[...] elaborada conforme a NBR 10520 [...]. Podem também constar epígrafes nas folhas ou páginas de abertura das seções primárias” (ABNT, 2002, p. 7). 
+A fonte da epígrafe deve sempre ser mencionada nas referências. 
+
+Citação direta até 3 linhas deve estar entre aspas e em parágrafo normal (vá até a janela de Estilo - selecione - Parágrafo), se tiver mais de 3 linhas, deve ser recuada 4 cm da margem esquerda, com fonte menor que 12 e espaçamento entre linhas simples 
+\end{comment}
+
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{“42 is the Answer to the Ultimate Question of Life, the Universe, and Everything.”  \\
+        \citeonline{adams2007hitchhiker}
+}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+    A crescente demanda de dispositivos iot vem acompanhada de uma carência tecnológica por baterias eficientes para garantir a flexibilidade dos sistemas que necessitam estar desconectados de cabos. Neste trabalho, será explorado \textit{Energy Harvesting} como técnica de obtenção de energia para dispositivos iot que tem como princípio a utilização do meio para obtê-las. Esta técnica tem como objetivo aproveitar a energias do meio em que o dispositivo se encontra como a solar, cinética, térmica entre outras. Este trabalho se propõe a coletar a energia das emissões de rádio frequência do meio ao longo de um tempo para uma transmissão em um momento oportuno. Desta forma, os paradigmas que se apresentam giram em torno de uma comunicação de baixo consumo e um gerenciamento eficiente para armazenagem desta potência. Neste cenário, parte-se de alternativas como o HT32SX que foi construído para atender demandas de extremamente baixo consumo e rádio integrado que pode ser adaptado para diversas aplicações de transmissão de dados também com pouco consumo. Com isso, espera-se projetar um dispositivo iot com uma linha de comunicação capaz de ser independente de cabos ou baterias.
+
+ \textbf{Palavras-chave}: Energy Harvesting, low power, iot, LP Wan.
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+The growing demand for iot devices is accompanied by a technological need for efficient batteries to ensure the flexibility of systems that need to be disconnected from cables. In this work, Energy Harvesting will be approached as a technique for obtaining energy for iot devices that has as its principle the use of the medium to obtain them. This technique aims to take advantage of the energies of the environment in which the device is located, such as solar, kinetic, thermal, among others. This work proposes to collect the energy of radio frequency emissions from the medium over a period of time for a transmission at an opportune moment. In this way, the paradigms that are presented revolve around a low consumption communication and an efficient management for the storage of this power. In this scenario, we start with alternatives such as the HT32SX, which was built to meet the demands of extremely low consumption and an integrated radio that can be adapted for various data transmission applications also with little consumption. With this, it is expected to design an iot device with a communication line capable of being independent of cables or batteries.
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: Energy Harvesting, low power, iot, LP Wan.
+ \end{otherlanguage*}
+\end{resumo}
+
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de quadros
+% ---
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+\begin{siglas}
+    \item[AD] \textit{Analógico-Digital}
+    \item[Anatel]   \textit{Agência Nacional de Telecomunicações}
+    \item[CI]   \textit{Circuito integrado}
+    \item[CMOS] \textit{Complementary metal–oxide–semiconductor} (metal-óxido-semicondutor de simetria complementar)
+    \item[DBPSK]    \textit{differential binary phase shift keying} (Modulação por chaveamento de deslocamento de fase binária diferencial)
+    \item[DC]  \textit{Direct Current} (Corrente contínua)
+    \item[FLV] \textit{Frutas, Verduras e Legumes}
+    \item[FSK] \textit{Frequency Shifting Keying} (Modulação por chaveamento de frequência)
+    \item[GPIO]     \textit{General Purpose Input/Output} (Entradas e Saídas de uso Geral)
+    \item[EH]   \textit{Energy Harvesting} (Coleta de Energia) 
+    \item[I2C]  \textit{Inter-Integrated Circuit} (Comunicação Entre circuitos Integrados)
+    \item[IOT]  \textit{Internet of Things} (Internet das coisas)
+    \item[ISM]  \textit{industrial, scientific and medical}(Indústria, Ciência e Medicina)
+    \item[LoRa] \textit{Long Range} (Longo alcance)
+    \item[LPWAN] \textit{Low-power wide-area network} (Redes de longa distância de baixa potência)
+    \item[M2M] \textit{machine-to-machine} (Máquina à máquina) 
+    \item [MLP] \textit{Multilayer Perceptron} (Perceptron multicamadas)
+    \item[RF]  \textit{Rádio Frequência}
+    \item[RTC]  \textit{Real-time clock} (Relógio de tempo real)
+    \item[UNISINOS]  \textit{Universidade do Vale do Rio dos Sinos}
+
+\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+\begin{simbolos}
+  \item[$t$] Tempo
+  \item[$dt$] Diferencial de tempo
+  \item[$V_a$] Tensão da fonte
+\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---

@@ -11,14 +11,6 @@ def search_in_file(path,searchstring):
 	with open(path, 'r',encoding='utf-8') as file:
 		if 'textit{'+searchstring in file.read():
 			print('encontrado: ' + searchstring + ' em: '+path.name)
-			#print(file.read())
-			for line in str(file.read()):
-				print('aqui')
-				if searchstring in p.findall(line) :
-					print('oi',line)
-			#	print(len(file.read()),len(line),len(text))
-			#	print(line)
-			#	print(line.find('textit{'+searchstring))
 
 vgm_url = 'https://www12.senado.leg.br/manualdecomunicacao/verbetes-acessorio/estrangeirismos-grafados-sem-italico-ou-aspas'
 html_text = requests.get(vgm_url).text

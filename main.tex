@@ -43,6 +43,7 @@
 %\usepackage{float}
 \usepackage{placeins}
 \usepackage{booktabs}
+\usepackage{pdfpages}
 % ---
 		
 % ---
@@ -116,6 +117,8 @@
 \definecolor{blue}{RGB}{41,5,195}
 %\definecolor{blue}{RGB}{0,0,0}
 
+
+
 % informações do PDF
 \makeatletter
 \hypersetup{
@@ -130,8 +133,10 @@
     	citecolor=blue,        		% color of links to bibliography
     	filecolor=magenta,      		% color of file links
 		urlcolor=blue,
+		anchorcolor =red,
 		bookmarksdepth=4
 }
+
 \makeatother
 % --- 
 
@@ -222,7 +227,7 @@
 
 %\include{apendices} % Adiciona os apêndices
 
-%\include{anexos} % Adiciona os anexos
+\include{anexos} % Adiciona os anexos
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO

@@ -73,17 +73,17 @@ Para avaliar a curva de carga e descarga do capacitor, tem-se que considerar os 
 \begin{table}
 \begin{center}
 \caption{Valores de $\tau$.}
-\begin{tabular}{@{}cc@{}}
+\begin{tabular}{@{}cccc@{}}
 \toprule
-\textbf{$t$}  &\textbf{ $v(t)/V_0$} \\ \midrule
-$1\tau$ & $0,36788$ \\
-$2\tau$ & $0,13534$ \\
-$3\tau$ & $0,04979$ \\
-$4\tau$ & $0,01832$ \\
-$5\tau$ & $0,00674$ \\ \bottomrule
+ & \textbf{$t$}  &\textbf{ $v(t)/V_0$} & \\ \midrule
+ & $1\tau$ & $0,36788$ & \\
+ & $2\tau$ & $0,13534$ & \\
+ & $3\tau$ & $0,04979$ & \\
+ & $4\tau$ & $0,01832$ & \\
+ & $5\tau$ & $0,00674$ & \\ \bottomrule
 \end{tabular}
 \end{center}  
-\fonte{Adaptado de \citeonline{Alexander2013}}
+\fonte{Adaptado de \citeonline[p.~246]{Alexander2013}}
 \label{tb:capacitor}
 \end{table}
 
@@ -92,7 +92,7 @@ $5\tau$ & $0,00674$ \\ \bottomrule
   \begin{center}
       \includegraphics[scale=1]{img/capacitor.pdf}
   \end{center}
-  \fonte{\citeonline{Alexander2013}}
+  \fonte{\citeonline[p.~246]{Alexander2013}}
   \label{fig:capacitor}
 \end{figure}
 
@@ -108,6 +108,8 @@ Com isso, obteve-se inicialmente o delta de tensão de operação através da eq
 \end{equation}
 
 
+Onde $V_{cc}$ é a tensão de entrada e $V_{min}$ é a tensão mínima de operação do RTC.
+
 \begin{equation}
      \Delta V =5V-1,3V = 3,7V
 \end{equation}
@@ -120,17 +122,18 @@ A partir da equação do tempo de descarga, pode-se obter o valor do capacitor c
   \label{eq:T}
 \end{equation}
 
+Onde $T$ é o tempo em segundos, $\Delta V$ é a variação da tensão de operação do RTC, $I$ é a corrente de operação do RTC e $C$ é o capcitor a ser calculado.
 
 \begin{equation}
     C=\frac{(40 Dias\times 60\times60\times24) \times 240nA}{3,7V} = 224mF \cong 220mF
       \label{eq:C}
 \end{equation}
 
-Após uma busca em distribuidores de componentes, escolheu-se pelo \textit{Part Number} LM055224A~\cite{Ohmite}.
+O capacitor foi aproximado para um valor comercial e após uma busca em distribuidores de componentes, escolheu-se pelo \textit{Part Number} LM055224A~\cite{Ohmite}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{HT32SX}
+\subsection{HT32SX}\label{sc:HT32SX}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 O iMCP–HT32SX é um circuito integrado multicomponente (MCO) projetado para fornecer uma solução de conectividade pronta para uso para aplicativos de Internet das Coisas (IoT). Ele fornece comunicações de uplink (transmissão) e downlink (recepção), e é o primeiro produto HT Micron em uma nova família de componentes sem memória. Suas pequenas dimensões, alto desempenho e baixo consumo de energia visam a melhor experiência para desenvolvedores de IoT. Possui um ARM Cortex M0+ de 32 bits (STM32L052x8) e o transceptor de baixa potência S2-LP da ST Microelectronics combinado com o SKY66420 da Skyworks Solutions que oferece todas as vantagens de desempenho, integração e conveniência da tecnologia avançada de empacotamento de semicondutores em um único chip. Este chip possui também uma EEPROM com capacidade para armazenar 2k Bytes. Na figura~\ref{fig:blockHT32SX} pode-se ver o diagrama de blocos do iMCP-HT32SX desenvolvido pela empresa HT Micron.
 
@@ -147,7 +150,7 @@ Além dos requisitos já citados, o HT32SX ainda conta com um sensor de temperat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{HTSXMO32L-22}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-A Placa de Avaliação iMCP HTSXMO32L-22 foi projetada para ser uma plataforma de desenvolvimento e facilitar o primeiro contato de novos usuários com o iMCP HT32SX, além de fornecer ao usuário avançado para começar a programar e desenvolver produtos imediatamente com estrutura mínima. Todos os recursos do HT32SX estão disponíveis na placa de avaliação. Duas opções de alimentação podem ser usadas: conexão USB ou bateria externa. A placa de avaliação mudará automaticamente para alimentação USB quando estiver disponível. A bateria externa torna a placa de avaliação portátil, tornando fácil testar a conectividade do Sigfox em qualquer lugar que você vá. Na figura~\ref{fig:placaHT32SX} pode-se ver a Placa iMCP HTSXMO32L-22 desenvolvida pela empresa HT Micron.
+A Placa de Avaliação iMCP HTSXMO32L-22 foi projetada para ser uma plataforma de desenvolvimento e facilitar o primeiro contato de novos usuários com o iMCP HT32SX, além de fornecer ao usuário avançado para começar a programar e desenvolver produtos imediatamente com estrutura mínima. Todos os recursos do HT32SX estão disponíveis na placa de avaliação. Duas opções de alimentação podem ser usadas: conexão USB ou bateria externa. A placa de avaliação muda automaticamente para alimentação USB quando esta estiver disponível, possibilitando praticidade na validação do software em fase de testes.  Na figura~\ref{fig:placaHT32SX} pode-se ver a Placa iMCP HTSXMO32L-22 desenvolvida pela empresa HT Micron.
 
 \begin{figure}
   \caption{Placa iMCP HTSXMO32L-22.}
@@ -158,6 +161,9 @@ A Placa de Avaliação iMCP HTSXMO32L-22 foi projetada para ser uma plataforma d
   \label{fig:placaHT32SX}
 \end{figure}
 
+A conexão para bateria externa torna a placa de avaliação portátil, facilitando testar a conectividade do Sigfox em qualquer lugar que se vá. Como mencionado na secção~\ref{sc:HT32SX}, a substituição de baterias por um super capacitor se fara presente nesta conexão. Os barramentos laterais possibilitam acesso direto as pinos de entradas e saídas. Com isso, a integração entre as diferentes partes do protótipo inicial pode ser efetuada sem necessidade de modificações complexas.
+
+Como se espera uma utilização mínima de espaço nesta aplicação, o uso de antena externa será feito inicialmente. Uma vem que a solução apresente resultado favorável, esta pode ser alterada para uma antena de circuito impresso juntamente com a integração de todos os recursos de hardware. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Wake-up Receiver}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,6 +172,8 @@ Devido a escolha por um sistema sem baterias, algumas contensões precisam ser e
 Com base nisso, \citeonline{ferreira} classifica como vantajosa a utilização de um circuito receptor adicional de baixa potência operando como um gatilho para o receptor principal. Com a identificação deste sinal, um microcontrolador pode ser acordado por interrupção e executar a inicialização do receptor principal.
 
 Uma vez que o sistema esteja acordado, ele pode inclusive realizar uma medição da energia armazenada no sistema de coleta para decidir pelo ligamento do receptor ou não. Uma vez que o sistema identifique as condições propícias para para o receptor de rádio principal, este pode aguardar pelos comandos básicos e após um tempo o sistema volta a dormir em modo profundo de consumo de energia.
+
+Para desenvolvimento e aplicação deste circuito, usou-se como referência conceitual o circuito integrado desenvolvido pelo \textit{Fraunhofer Institute Integrated Circuits and Systems} de acordo com o Anexo-~\ref{ax:wake}, que apresenta sensibilidade de $-80dBm$ e um consumo de corrente inferior a $3\mu A$ @ $1.8V$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textit{Software}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

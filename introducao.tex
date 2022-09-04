@@ -1,10 +1,19 @@
 % ----------------------------------------------
-% INTRODUCAO
+\chapter{INTRODUÇÃO}\label{cap:introducao}
 % ----------------------------------------------
-\chapter{Introdução}\label{cap:introducao}
-
 A base para o desenvolvimento de um sistema de monitoramento digital capaz de acompanhar produtos perecíveis, passa por um entendimento de todos os elos envolvidos. Dentre eles a dinâmica entre a temperatura e o crescimentos de vida microbiana (Listeria) bem como a logística nacional para esse tipo de alimento. Além disso, deve-se considerar também as limitações técnicas para o desenvolvimento de dispositivos IoT capazes de obter dados críticos de todo o processo.
-
+% ----------------------------------------------
+\section{TEMA} 
+% ----------------------------------------------
+Neste trabalho pretende-se propor um dispositivo capaz acompanhar o deslocamento de um determinado alimento perecível. Para isso, esse dispositivo, necessita possuir alguns requisitos como:
+\begin{itemize}
+    \item Baixo valor agregado, uma vez que precisa ser empregado em caixas de transporte de alimentos;
+    \item Ocupar a menor área possível;
+    \item Operar sem a necessidade trocas de pilhas ou recarregamento de baterias;
+\end{itemize}
+% ----------------------------------------------
+\section{DELIMITAÇÃO DO TEMA} 
+% ----------------------------------------------
 Neste trabalho pretende-se propor um dispositivo capaz acompanhar o deslocamento de um determinado alimento perecível. Para isso, esse dispositivo, necessita possuir alguns requisitos como:
 \begin{itemize}
     \item Baixo valor agregado, uma vez que precisa ser empregado em caixas de transporte de alimentos;
@@ -13,8 +22,17 @@ Neste trabalho pretende-se propor um dispositivo capaz acompanhar o deslocamento
 \end{itemize}
 
 A definição destes requisitos, passa também por um entendimento das condições de operação e ambiente a que esse sistema está submetido, bem como os agentes envolvidos para um correto entendimento do cenário completo.
+% ----------------------------------------------
+\section{PROBLEMA}
+% ----------------------------------------------
+
+
+
+% ----------------------------------------------
+\section{OBJETIVOS}
+% ----------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Produtos perecíveis}
+\subsection{Produtos perecíveis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Denominam-se alimentos perecíveis aqueles que possuem uma quantidade significativa de água. Isso os torna vulneráveis a proliferação de vida microbiana que é a principal responsável pela decomposição destes alimentos. Para se manterem conservados, estes alimentos necessitam manter-se refrigerados.
 Alimentos perecíveis estão presentes no dia a dia das populações no mundo inteiro, pois muitos deles são a base de uma alimentação saudável devido a pouca exposição a conservantes ou processos industriais que embora eliminem as suas bactérias, acabam por eliminar também os seus nutrientes.
@@ -24,7 +42,7 @@ Com base nisso, apresenta-se um problema relacionado a distribuição destes ali
 Com o objetivo de predizer o impacto do aumento de listeria \citeonline{monica} apresenta um algorítimo baseado em redes neurais artificiais \textit{Multilayer Perceptron} (MLP) em função dos impactos atmosféricos a que esses alimentos são submetidos. A capacidade de prever a vida útil destes alimentos a partir de fatores ambientais pode ser decisivo para a escolha do meio de transporte do mesmo e para o aumento das exigências de qualidade que redes atacadistas impõe no ato de revenda dos mesmos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Logística}
+\subsection{Logística}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Dentro de uma cadeia de distribuição de alimentos, existe uma série de desafios logísticos envolvidos no processo e todos esses processos são responsáveis por um grau de depreciação na vida útil de alimentos como frutas, verduras e legumes (FLV). Analisar essa cadeia é essencial para compreender que quanto mais elementos envolvidos, como intermediários, maior as chances de se perder a rastreabilidade e a qualidade dos FLV.
 Os autores \citeonline{Aliotte2022} detalham que os fatores mais importantes a serem observados no processo de distribuição são:
@@ -62,7 +80,7 @@ Já os três últimos tópicos: tipos de embalagem, troca de embalagem e manipul
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{IoT}
+\subsection{IoT}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 O termo \textit{Internet of Things} (IOT), traduzido livremente para ``Internet das Coisas'', popularizou-se nos últimos anos devido aos avanços tecnológicos em termos de miniaturização de circuitos eletrônicos. Graças a esses avanços, um mundo de opções se abriu para resolver problemas que antes eram impossíveis como o controle de iluminação artificial em uma horta apresentado por \citeonline{9268238} que controla um sistema de espelhos para garantir um adequado fornecimento de luz, além de coletar informações disponibilizando-as em uma plataforma web.
 

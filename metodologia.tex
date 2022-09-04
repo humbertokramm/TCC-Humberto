@@ -57,7 +57,7 @@ Este sensor possui uma acurácia típica de $\pm 1^oC$ que é relativamente alta
 Outra vantagem do uso deste RTC nesta aplicação, se dá em função da possibilidade de configuração de alarmes capazes de acordar o processador por uma janela de tempo pré estipulada, ou o cruzamento por uma temperatura específica. Esta função, pode ser considerada um real diferencial para a redução do consumo de operação do dispositivo, já que permite ao microcontrolador ligado ao RTC entrar em um modo profundo de economia de energia (\textit{Deep Sleep Mode}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Super Capacitor}
+\subsection{Super capacitor}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Dispositivos IoT podem operar de duas maneiras, conectados em algum sistema de alimentação por fios, ou alimentados para uma fonte de energia conectada somente a ele. Devido às características de mobilidade do sistema proposto neste projeto, a alimentação por algo conectado a rede elétrica não se faz possível, sendo assim necessário o uso de alguma fonte de alimentação independente.
 
@@ -165,15 +165,10 @@ A conexão para bateria externa torna a placa de avaliação portátil, facilita
 
 Como se espera uma utilização mínima de espaço nesta aplicação, o uso de antena externa será feito inicialmente. Uma vem que a solução apresente resultado favorável, esta pode ser alterada para uma antena de circuito impresso juntamente com a integração de todos os recursos de hardware. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Wake-up Receiver}
+\subsection{Desempenho energético}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Devido a escolha por um sistema sem baterias, algumas contensões precisam ser executadas para a operação do sistema de forma a desperdiçar o mínimo de energia. Embora o monitoramento de temperaturas de operação implique em um custo energético, o mesmo em nada se compara a uma transmissão de rádio, ou até mesmo a manutenção de uma recepção de rádio por longos períodos de tempo. Por isso se faz necessário um mecanismo responsável por ligar o receptor para aguardar uma comunicação. Neste cenário, o custo energético se mantém apenas por um intervalo curto de tempo. Mas para identificar o início dessa comunicação, utiliza-se o método chamada \textit{Wake-up Receive}. 
 
-Com base nisso, \citeonline{ferreira} classifica como vantajosa a utilização de um circuito receptor adicional de baixa potência operando como um gatilho para o receptor principal. Com a identificação deste sinal, um microcontrolador pode ser acordado por interrupção e executar a inicialização do receptor principal.
 
-Uma vez que o sistema esteja acordado, ele pode inclusive realizar uma medição da energia armazenada no sistema de coleta para decidir pelo ligamento do receptor ou não. Uma vez que o sistema identifique as condições propícias para para o receptor de rádio principal, este pode aguardar pelos comandos básicos e após um tempo o sistema volta a dormir em modo profundo de consumo de energia.
-
-Para desenvolvimento e aplicação deste circuito, usou-se como referência conceitual o circuito integrado desenvolvido pelo \textit{Fraunhofer Institute Integrated Circuits and Systems} de acordo com o Anexo-~\ref{ax:wake}, que apresenta sensibilidade de $-80dBm$ e um consumo de corrente inferior a $3\mu A$ @ $1.8V$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textit{Software}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

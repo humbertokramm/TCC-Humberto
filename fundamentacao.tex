@@ -79,6 +79,16 @@ Nestes casos, a escolha da fonte de energia deve ser analisada respeitando os cr
   \fonte{~\cite{manuel} }
   \label{fig:espectro}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wake-up Receiver}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Devido a escolha por um sistema sem baterias, algumas contensões precisam ser executadas para a operação do sistema de forma a desperdiçar o mínimo de energia. Embora o monitoramento de temperaturas de operação implique em um custo energético, o mesmo em nada se compara a uma transmissão de rádio, ou até mesmo a manutenção de uma recepção de rádio por longos períodos de tempo. Por isso se faz necessário um mecanismo responsável por ligar o receptor para aguardar uma comunicação. Neste cenário, o custo energético se mantém apenas por um intervalo curto de tempo. Mas para identificar o início dessa comunicação, utiliza-se o método chamada \textit{Wake-up Receive}. 
+
+Com base nisso, \citeonline{ferreira} classifica como vantajosa a utilização de um circuito receptor adicional de baixa potência operando como um gatilho para o receptor principal. Com a identificação deste sinal, um microcontrolador pode ser acordado por interrupção e executar a inicialização do receptor principal.
+
+Uma vez que o sistema esteja acordado, ele pode inclusive realizar uma medição da energia armazenada no sistema de coleta para decidir pelo ligamento do receptor ou não. Uma vez que o sistema identifique as condições propícias para para o receptor de rádio principal, este pode aguardar pelos comandos básicos e após um tempo o sistema volta a dormir em modo profundo de consumo de energia.
+
+Para desenvolvimento e aplicação deste circuito, usou-se como referência conceitual o circuito integrado desenvolvido pelo \textit{Fraunhofer Institute Integrated Circuits and Systems} de acordo com o Anexo-~\ref{ax:wake}, que apresenta sensibilidade de $-80dBm$ e um consumo de corrente inferior a $3\mu A$ @ $1.8V$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

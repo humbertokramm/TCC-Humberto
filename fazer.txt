@@ -1,0 +1,32 @@
+
+
+- levar wakeup receiver para fundamentação (feito)
+- arrumar introdução (parcial)
+
+- metodologia tem que definir os requisitos do projeto
+   - dizer o que vou fazer
+
+
+
+- custo beneficio de energia
+
+
+
+- tabela de consumo de todo mundo
+
+
+- quanto precisa de carga para funcionar
+
+
+-20dBm -> W = 0.1mW
+
+
+
+tempo de carga em 0,1mW
+
+https://www.vedantu.com/physics/energy-stored-in-a-capacitor
+
+
+usar o wakeup cosiderar o do fernando
+
+
